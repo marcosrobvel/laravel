@@ -20,7 +20,7 @@ class ActivityFactory extends Factory
     {
         return [
             'type' => $this->faker->randomElement(['surf', 'windsurf', 'kayak', 'atv', 'hot air balloon']),
-            'user_id' => User::factory(), // o puedes asignar un ID válido si ya existen usuarios
+            'user_id' => User::factory(),
             'datetime' => $this->faker->dateTimeBetween('now', '+1 month'),
             'paid' => $this->faker->boolean(),
             'notes' => $this->faker->optional()->paragraph,
