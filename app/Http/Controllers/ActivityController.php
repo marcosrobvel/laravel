@@ -29,38 +29,66 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        $activity = new Activity();
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        
+        // $activity->user_id = auth()->id(); // Solo si hay login
+
+        $activity->save();
+
+        return redirect()->route('activities.index')->with('success', 'Actividad creada correctamente.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+        return view('activities.show', compact('activity'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+        return view('activities.edit', compact('activity'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+        $activity = Activity::findOrFail($id);
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        $activity->save();
+
+        return redirect()->route('activities.index')->with('success', 'Actividad actualizada.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+        $activity->delete();
+
+        return redirect()->route('activities.index')->with('success', 'Actividad eliminada.');
     }
 }
