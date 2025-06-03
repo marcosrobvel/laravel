@@ -1,9 +1,18 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Details Activity</title>
+    </head>
+    <body>
+        <ul>
+            <li><strong>Type:</strong> {{ $activity->type}}</li>
+            <li><strong>Date:</strong> {{ $activity->dateTime}}</li>
+            <li><strong>Paid:</strong> {{ $activity->paid ? 'Yes' : 'No' }}</li>
+            <li><strong>Notes:</strong> {{ $activity->notes}}</li>
+            <li><strong>Satisfaction:</strong> {{ $activity->satisfaction}}</li>
+            <li><strong>User:</strong> {{ $activity->user?->name ?? 'No user'}}</li>
+        </ul>
 
-@section('content')
-    <h1>{{ $activity->title }}</h1>
-    <p>{{ $activity->description }}</p>
-    <p>Creado por: {{ $activity->user->name ?? 'Desconocido' }}</p>
-
-    <a href="{{ route('activities.index') }}">Volver</a>
-@endsection
+        <a href="{{ route('activities.index') }}">Return to list</a>
+    </body>
+</html>
