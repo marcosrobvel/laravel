@@ -10,13 +10,16 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource('/activities', ActivityController::class)->withoutMiddleware('auth');
-});
+// Ruta login placeholder para evitar error Route [login] not defined
+Route::get('/login', function () {
+    return 'Login no habilitado';
+})->name('login');
 
-//require __DIR__.'/auth.php';
+// Rutas sin middleware auth
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+Route::resource('/activities', ActivityController::class);
