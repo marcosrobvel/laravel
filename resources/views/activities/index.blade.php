@@ -1,24 +1,38 @@
-@extends('layouts.app') {{-- Asegúrate de tener un layout base --}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity List</title>
+</head>
+<body>
 
-@section('content')
-    <h1>Actividades</h1>
-
-    <a href="{{ route('activities.create') }}">Crear nueva actividad</a>
-
-    @foreach ($activities as $activity)
-        <div>
-            <h3>{{ $activity->title }}</h3>
-            <p>{{ $activity->description }}</p>
-            <p>Creada por: {{ $activity->user->name ?? 'Sin usuario' }}</p>
-
-            <a href="{{ route('activities.show', $activity) }}">Ver</a>
-            <a href="{{ route('activities.edit', $activity) }}">Editar</a>
-
-            <form action="{{ route('activities.destroy', $activity) }}" method="POST" style="display:inline">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Eliminar</button>
-            </form>
-        </div>
-    @endforeach
-@endsection
+    @if(count($activities) > 0)
+        <ul>
+            @foreach($activities as $activity)
+                <li>
+                    {{ $activity->type }} - {{ $activity->dateTime }}
+                    <a href="{{ route('activities.show', $activity->id) }}">Details</a>
+                    <a href="{{ route('activities.edit', $activity->id) }}">Edit</a>
+                    <form action="{{ route('activities.destroy', $activity->id) }}" method="POST" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onClick="return confirm('Are you sure you want to delete this activity')">
+                            Delete
+                        </button>
+                    </form>
+                </li>
+            @endforeach
+        </ul>
+    @else
+        <p>No activities</p>
+    @endif
+</body>
+</html>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
