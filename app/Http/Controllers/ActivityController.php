@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Activity;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 
 class ActivityController extends Controller
 {
@@ -29,35 +32,43 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-        ]);
-
-        $activity = new Activity();
-        $activity->title = $request->title;
-        $activity->description = $request->description;
-        
-        // $activity->user_id = auth()->id(); // Solo si hay login
-
-        $activity->save();
-
-        return redirect()->route('activities.index')->with('success', 'Actividad creada correctamente.');
+        try {
+            $validated = $request->validate([
+                'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
+                'datetime' => 'required|date',
+                'paid' => 'boolean',
+                'notes' => 'required|string',
+                'satisfaction' => 'nullable|integer|min:0|max:10'
+            ]);
+            
+            $validated['userId'] = 1;
+            $validated['paid'] = $request->has('paid');
+            $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
+            Log::info('Validated:', $validated);
+            if (!User::find($validated['userId'])) {
+                return back()->withErrors(['userId' => 'El usuario no existe en la base de datos.']);
+            }
+            Activity::create($validated);
+            return redirect()->route('activities.index')->with('success', 'Created activity');
+        } catch(\Throwable $err) {
+            report($err);
+            return back()->withErrors(['error' => $err->getMessage()]);
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(string $id)
     {
-        $activity = Activity::findOrFail($id);
+        $activity = Activity::with('user')->findOrFail($id);
         return view('activities.show', compact('activity'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(string $id)
     {
         $activity = Activity::findOrFail($id);
         return view('activities.edit', compact('activity'));
@@ -66,29 +77,40 @@ class ActivityController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, string $id)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
+        $activity = Activity::findOrFail($id);
+
+        $validated = $request->validate([
+            'type' => 'sometimes|required|in:surf,windsurf,kayak,atv,hot air balloon',
+            'userId' => 'sometimes|required|exists:users,id',
+            'datetime' => 'sometimes|required|date',
+            'paid' => 'nullable',
+            'notes' => 'sometimes|required|string',
+            'satisfaction' => 'nullable|integer|min:0|max:10'
         ]);
 
-        $activity = Activity::findOrFail($id);
-        $activity->title = $request->title;
-        $activity->description = $request->description;
-        $activity->save();
+        $validated['paid'] = $request->has('paid');
 
-        return redirect()->route('activities.index')->with('success', 'Actividad actualizada.');
+        // Solo convertir datetime si existe en el array validated
+        if (isset($validated['datetime'])) {
+            $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
+        }
+
+        Log::info('Updating activity:', $validated);
+        $activity->update($validated);
+
+        return redirect()->route('activities.index')->with('success', 'Activity updated succesfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
         $activity = Activity::findOrFail($id);
         $activity->delete();
 
-        return redirect()->route('activities.index')->with('success', 'Actividad eliminada.');
+        return redirect()->route('activities.index')->with('success', 'Activity deleted succesfully');
     }
 }
