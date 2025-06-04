@@ -50,7 +50,6 @@ class ActivityController extends Controller
             }
             
             Activity::create($validated);
-            Log::info('Actividad creada:', $validated);
             return redirect()->route('activities.index')->with('success', 'Created activity');
         } catch(\Throwable $err) {
             report($err);
@@ -95,7 +94,6 @@ class ActivityController extends Controller
 
         $validated['paid'] = $request->has('paid');
 
-        // Solo convertir datetime si existe en el array validated
         if (isset($validated['datetime'])) {
             $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
         }
