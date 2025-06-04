@@ -10,10 +10,18 @@ class Activity extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'description',
+        'type',
+        'datetime',
+        'paid',
+        'notes',
+        'satisfaction',
         'user_id',
     ];
+
+    protected $casts = [
+        'datetime' => 'datetime',
+    ];
+
 
     public function user()
     {

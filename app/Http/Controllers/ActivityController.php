@@ -41,20 +41,23 @@ class ActivityController extends Controller
                 'satisfaction' => 'nullable|integer|min:0|max:10'
             ]);
             
-            $validated['userId'] = 1;
+            $validated['user_id'] = 1;
             $validated['paid'] = $request->has('paid');
             $validated['datetime'] = date('Y-m-d H:i:s', strtotime($validated['datetime']));
-            Log::info('Validated:', $validated);
-            if (!User::find($validated['userId'])) {
-                return back()->withErrors(['userId' => 'El usuario no existe en la base de datos.']);
+
+            if (!User::find($validated['user_id'])) {
+                return back()->withErrors(['user_id' => 'El usuario no existe en la base de datos.']);
             }
+            
             Activity::create($validated);
+            Log::info('Actividad creada:', $validated);
             return redirect()->route('activities.index')->with('success', 'Created activity');
         } catch(\Throwable $err) {
             report($err);
             return back()->withErrors(['error' => $err->getMessage()]);
         }
     }
+
 
     /**
      * Display the specified resource.
@@ -83,7 +86,7 @@ class ActivityController extends Controller
 
         $validated = $request->validate([
             'type' => 'sometimes|required|in:surf,windsurf,kayak,atv,hot air balloon',
-            'userId' => 'sometimes|required|exists:users,id',
+            'user_id' => 'sometimes|required|exists:users,id',
             'datetime' => 'sometimes|required|date',
             'paid' => 'nullable',
             'notes' => 'sometimes|required|string',
