@@ -19,8 +19,8 @@ class RoomFactory extends Factory
     {
         return [
         'photo' => json_encode(['img1.jpg', 'img2.jpg']),
-        'room_number' => fake()->unique()->numberBetween(100, 999),
-        'room_type' => Arr::random(['Single', 'Double', 'Suite']),
+        'roomNumber' => fake()->unique()->numberBetween(100, 999),
+        'roomType' => Arr::random(['Single', 'Double', 'Suite']),
         'amenities' => 'WiFi, TV, AC',
         'price' => fake()->randomFloat(2, 50, 500),
         'offer_price' => fake()->randomFloat(2, 40, 450),
