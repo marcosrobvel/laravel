@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\RoomController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,3 +24,5 @@ Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.up
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 Route::resource('/activities', ActivityController::class);
+
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
