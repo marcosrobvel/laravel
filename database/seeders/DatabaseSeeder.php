@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ActivitySeeder::class,
             RoomSeeder::class,
+            BookingSeeder::class,
         ]);
     }
 }

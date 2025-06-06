@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,3 +27,4 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 Route::resource('/activities', ActivityController::class);
 
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
+Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');

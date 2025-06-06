@@ -13,7 +13,16 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+        $table->string('guest', 100);
+        $table->date('orderDate');
+        $table->date('checkIn');
+        $table->date('checkOut');
+        $table->text('special')->nullable();
+        $table->enum('roomType', ['Single', 'Double', 'Suite', 'Single Bed', 'Double Bed', 'Deluxe Suite']);
+        $table->integer('roomNumber');
+        $table->enum('bookStatus', ['in', 'out', 'progress']);
+        $table->json('photo');
+        $table->timestamps();
         });
     }
 
