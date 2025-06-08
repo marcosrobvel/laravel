@@ -5,7 +5,7 @@
 </head>
 <body>
     <main>
-        @yield('content')
+       
     </main>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     @if(session('success'))
