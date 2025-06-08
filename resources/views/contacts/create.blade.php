@@ -1,42 +1,62 @@
 @extends('layouts.app')
 
-<form action="{{ route('activities.store') }}" method="POST">
-    @csrf
-     <label for="type">Type:</label>
-        <select name="type" id="type" required>
-            <option value="surf">Surf</option>
-            <option value="windsurf">Windsurf</option>
-            <option value="kayak">Kayak</option>
-            <option value="atv">ATV</option>
-            <option value="hot air ballon">Hot Air Balloon</option>
-        </select>
-<br><br>
-        <label for="dateTime">Date:</label>
-        <input type="datetime-local" name="datetime" id="datetime" required>
-<br><br>
-        <label for="paid">Paid:</label>
-        <input type="checkbox" name="paid" id="paid" value="1">
-<br><br>
-        <label for="notes">Notes:</label>
-        <textarea name="notes" id="notes" required></textarea>
-<br><br>
-        <label for="satisfaction">Satisfaction (0-10):</label>
-        <input type="number" name="satisfaction" id="satisfaction" min="0" max="10">
-<br><br>
-    <button type="submit">Save</button>
-</form>
-
+@section('content')
+<h1>Create Contact</h1>
 
 @if ($errors->any())
-    <div class="alert alert-danger">
+    <div style="color: red;">
         <ul>
-            @foreach ($errors->all() as $error)
+            @foreach ($errors->all() as $error) 
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
 @endif
 
+<form action="{{ route('contacts.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 
-<a href="{{ route('activities.index') }}">Volver a la lista de actividades</a>
-<br><br>
+    <label for="photo">Photo URL:</label>
+    <input type="url" name="photo" id="photo" value="{{ old('photo') }}" required>
+    <br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date" value="{{ old('date') }}" required>
+    <br><br>
+
+    <label for="customer">Customer:</label>
+    <input type="text" name="customer" id="customer" value="{{ old('customer') }}" required>
+    <br><br>
+
+    <label for="mail">Email:</label>
+    <input type="email" name="mail" id="mail" value="{{ old('mail') }}" required>
+    <br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" name="phone" id="phone" value="{{ old('phone') }}" required>
+    <br><br>
+
+    <label for="subject">Subject:</label>
+    <select name="subject" id="subject" required>
+        <option value="New Subject" {{ old('subject') == 'New Subject' ? 'selected' : '' }}>New Subject</option>
+        <option value="Other" {{ old('subject') && old('subject') != 'New Subject' ? 'selected' : '' }}>Other</option>
+    </select>
+    <input type="text" name="subject_custom" placeholder="If other, type here" value="{{ old('subject') != 'New Subject' ? old('subject') : '' }}">
+    <br><br>
+
+    <label for="comment">Comment:</label>
+    <textarea name="comment" id="comment" required>{{ old('comment') }}</textarea>
+    <br><br>
+
+    <label for="status">Status:</label>
+    <select name="status" id="status" required>
+        <option value="pending" {{ old('status') == '' ? 'selected' : '' }}>Pending</option>
+        <option value="archived" {{ old('status') == 'archived' ? 'selected' : '' }}>Archived</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<a href="{{ route('contacts.index') }}">Back to contacts list</a>
+@endsection

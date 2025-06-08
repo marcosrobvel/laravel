@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Details Activity</title>
-    </head>
-    <body>
-        <ul>
-            <li><strong>Type:</strong> {{ $activity->type}}</li>
-            <li><strong>Date:</strong> {{ $activity->dateTime}}</li>
-            <li><strong>Paid:</strong> {{ $activity->paid ? 'Yes' : 'No' }}</li>
-            <li><strong>Notes:</strong> {{ $activity->notes}}</li>
-            <li><strong>Satisfaction:</strong> {{ $activity->satisfaction}}</li>
-            <li><strong>User:</strong> {{ $activity->user?->name ?? 'No user'}}</li>
-        </ul>
+@extends('layouts.app')
 
-        <a href="{{ route('activities.index') }}">Return to list</a>
-    </body>
-</html>
+@section('content')
+<h1>Contact Details</h1>
+
+<ul>
+    <li><strong>Photo:</strong><br><img src="{{ $contact->photo }}" alt="Photo" width="150"></li>
+    <li><strong>Date:</strong> {{ $contact->date }}</li>
+    <li><strong>Customer:</strong> {{ $contact->customer }}</li>
+    <li><strong>Email:</strong> {{ $contact->mail }}</li>
+    <li><strong>Phone:</strong> {{ $contact->phone }}</li>
+    <li><strong>Subject:</strong> {{ $contact->subject }}</li>
+    <li><strong>Comment:</strong> {{ $contact->comment }}</li>
+    <li><strong>Status:</strong> {{ ucfirst($contact->status) }}</li>
+</ul>
+
+<a href="{{ route('contacts.index') }}">Back to contacts list</a>
+@endsection

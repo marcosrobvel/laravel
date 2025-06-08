@@ -3,6 +3,8 @@
 @section('content')
     <h1>Contactos</h1>
 
+    <a href="{{ route('contacts.create') }}">Create New Contact</a>
+
     @if(session('success'))
         <div style="background: #d4edda; padding: 10px; margin-bottom: 1rem; color: #155724;">
             {{ session('success') }}
@@ -22,6 +24,17 @@
                     <img src="{{ asset('storage/' . $contact->photo) }}" alt="Foto de contacto" width="150" style="margin-top: 10px;">
                 @endif
             </div>
+            <div class="actions">
+            <a href="{{ route('contacts.edit', $contact->id) }}" style="margin-right: 10px;">Edit</a>
+            <a href="{{ route('contacts.show', $contact->id) }}" style="margin-right: 10px;">Details</a>
+
+            <form action="{{ route('contacts.destroy', $contact->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this contact?');">
+                @csrf
+                        @method('DELETE')
+                        <button type="submit" style="color: red; background: none; border: none; cursor: pointer;">Delete</button>
+                    </form>
+                </div>
         @endforeach
+        
     </div>
 @endsection
