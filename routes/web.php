@@ -26,6 +26,7 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 Route::resource('/activities', ActivityController::class);
 
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
+Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
 Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
 Route::get('/rooms/{room}', [RoomController::class, 'show'])->name('rooms.show');
 Route::get('/rooms/{room}/edit', [RoomController::class, 'edit'])->name('rooms.edit');
@@ -33,6 +34,7 @@ Route::put('/rooms/{room}', [RoomController::class, 'update'])->name('rooms.upda
 Route::delete('/rooms/{room}', [RoomController::class, 'destroy'])->name('rooms.destroy');
 
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create');
 Route::get('/bookings/{booking}', [BookingController::class, 'show'])->name('bookings.show');
 Route::get('/bookings/{booking}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
@@ -40,6 +42,7 @@ Route::put('/bookings/{booking}', [BookingController::class, 'update'])->name('b
 Route::delete('/bookings/{booking}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 Route::get('/contacts/create', [ContactController::class, 'create'])->name('contacts.create');
 Route::get('/contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show');
 Route::get('/contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');

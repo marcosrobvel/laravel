@@ -21,7 +21,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('rooms.create');
     }
 
     /**
@@ -29,7 +29,25 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'photo' => 'nullable|array',
+            'photo.*' => 'string', // Asumiendo que son nombres de archivos
+            'roomNumber' => 'required|integer|unique:rooms,roomNumber',
+            'roomType' => 'required|string',
+            'amenities' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+            'offer_price' => 'nullable|numeric|min:0',
+            'status' => 'required|in:available,booked',
+        ]);
+
+        // Guardar photo como JSON
+        if (isset($validated['photo'])) {
+            $validated['photo'] = json_encode($validated['photo']);
+        }
+
+        Room::create($validated);
+
+        return redirect()->route('rooms.index')->with('success', 'Room created successfully.');
     }
 
     /**
@@ -37,7 +55,8 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $room = Room::findOrFail($id);
+        return view('rooms.show', compact('room'));
     }
 
     /**
@@ -45,7 +64,8 @@ class RoomController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $room = Room::findOrFail($id);
+        return view('rooms.edit', compact('room'));
     }
 
     /**
@@ -53,7 +73,26 @@ class RoomController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $room = Room::findOrFail($id);
+
+        $validated = $request->validate([
+            'photo' => 'nullable|array',
+            'photo.*' => 'string',
+            'roomNumber' => 'required|integer|unique:rooms,roomNumber,' . $room->id,
+            'roomType' => 'required|string',
+            'amenities' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+            'offer_price' => 'nullable|numeric|min:0',
+            'status' => 'required|in:available,booked',
+        ]);
+
+        if (isset($validated['photo'])) {
+            $validated['photo'] = json_encode($validated['photo']);
+        }
+
+        $room->update($validated);
+
+        return redirect()->route('rooms.index')->with('success', 'Room updated successfully.');
     }
 
     /**
@@ -61,6 +100,9 @@ class RoomController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $room = Room::findOrFail($id);
+        $room->delete();
+
+        return redirect()->route('rooms.index')->with('success', 'Room deleted successfully.');
     }
 }

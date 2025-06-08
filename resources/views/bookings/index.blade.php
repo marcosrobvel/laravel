@@ -3,6 +3,8 @@
 @section('content')
     <h1>Bookings</h1>
 
+    <a href="{{ route('bookings.create') }}">Create New Booking</a>
+
     <div class="booking-list">
         @foreach ($bookings as $booking)
             <div class="booking" style="border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem;">
