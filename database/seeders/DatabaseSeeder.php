@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             ActivitySeeder::class,
             RoomSeeder::class,
             BookingSeeder::class,
+            ContactSeeder::class,
         ]);
     }
 }

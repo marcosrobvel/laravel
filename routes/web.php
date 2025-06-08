@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,3 +29,4 @@ Route::resource('/activities', ActivityController::class);
 
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');

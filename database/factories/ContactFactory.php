@@ -17,7 +17,14 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'photo' => 'default.jpg',
+            'date' => $this->faker->date(),
+            'customer' => $this->faker->name(),
+            'mail' => $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->phoneNumber(),
+            'subject' => $this->faker->sentence(6),
+            'comment' => $this->faker->paragraph(),
+            'status' => $this->faker->randomElement(['', 'archived']),
         ];
     }
 }
