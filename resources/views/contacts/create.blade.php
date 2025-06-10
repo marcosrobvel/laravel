@@ -59,4 +59,5 @@
 </form>
 
 <a href="{{ route('contacts.index') }}">Back to contacts list</a>
+<a href="{{ route('contacts.index') }}">Back to contacts list</a>
 @endsection
