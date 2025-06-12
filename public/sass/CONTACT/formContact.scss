@@ -1,0 +1,58 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+form input, form textarea{
+    border: none;
+    background-color: #F8F8F8;
+    background: none;
+    margin-left: 15px;
+}
+
+input{
+    width: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #777777;
+}
+
+textarea{
+    height: 100px;
+    width: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #777777;
+}
+
+.inputContactName, .inputContactNumber, .inputContactAddress, .inputContactSubject, .inputContactMessage{
+   width: 100%;
+   background-color: #F8F8F8;
+   padding-left: 20px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-right: 20px;
+   margin-bottom: 15px;
+   display: flex;
+}
+
+.inputContactMessage img{
+    height: 20px;
+}
+
+form button{
+    color: white;
+    border-color: #ffffff ;
+    background-color: #BEAD8E;
+    font-family: 'Archivo';
+    letter-spacing: 3px;
+    font-weight: 500;
+    height: 60px;
+    padding: 20px;
+    width: 70%;
+}

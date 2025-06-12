@@ -1,0 +1,123 @@
+.black-background__perfect-base-for-you {
+    height: auto;
+    background-color: #333333;
+    width: 100%;
+    color: white;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+
+    .h5-title h5 {
+        font-family: 'Archivo';
+        letter-spacing: 3px;
+        width: 70%;
+    }
+
+    .big-title__perfect-base-for-you {
+        margin-top: 30px;
+
+        h1 {
+            font-family: 'Old Standard TT';
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 110%;
+        }
+    }
+
+    .btns__take-tour-learn-more {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin-top: 30px;
+
+        .btn__take-a-tour {
+            background-color: #BEAD8E;
+            color: white;
+            border-color: #ffffff;
+            font-family: 'Archivo';
+            letter-spacing: 3px;
+            font-weight: 500;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            color: white;
+            border-color: #ffffff;
+            background-color: #333333;
+            font-family: 'Archivo';
+            letter-spacing: 3px;
+            font-weight: 500;
+            height: 60px;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.select-dates {
+    width: auto;
+    background-color: #222222;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+
+    .select__arrival-date,
+    .select__departure-date {
+        margin-bottom: 20px;
+
+        .select__label {
+            font-family: 'Roboto';
+            font-weight: 500;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .select__input-wrapper {
+            display: flex;
+
+            .select__input {
+                display: flex;
+                background-color: #222222;
+                height: 40px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 2px solid #BEAD8E;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                color: #686868;
+
+                &:focus {
+                    border-color: #BEAD8E;
+                }
+            }
+        }
+    }
+
+    .btn-check-availability {
+        .btn {
+            color: white;
+            border-color: #ffffff;
+            background-color: #BEAD8E;
+            font-family: 'Archivo';
+            letter-spacing: 3px;
+            font-weight: 500;
+            height: 60px;
+            padding: 20px;
+
+            &:hover {
+                background-color: #9f9f9f;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.facilities-core-features {
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+
+    &__title {
+        font-family: 'Archivo';
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        color: #FFFFFF;
+    }
+
+    &__heading {
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 56px;
+        color: #FFFFFF;
+    }
+
+    &__slider {
+        background-color: #292929;
+        padding: 20px;
+        margin-top: 30px;
+        text-align: left;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__icon {
+            margin-right: 15px;
+            width: 30px;
+            height: auto;
+        }
+
+        &__slider-number {
+            font-family: 'Old Standard TT';
+            font-weight: 400;
+            font-size: 40px;
+            color: #222222;
+            margin-right: 20px;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__feature-heading {
+            font-family: 'Old Standard TT';
+            font-weight: 700;
+            font-size: 30px;
+            color: #FFFFFF;
+        }
+
+        &__feature-description {
+            font-family: 'Archivo';
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 24px;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        &__h1Big01 {
+            font-family: 'Archivo';
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 130px;
+            color: #222222;
+            position: absolute;
+            bottom: -96rem;
+            right: 0;
+            margin-right: 30px;
+        }
+
+        &__image {
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__dots-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &__dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 1.5px;
+        background-color: #333333;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #BEAD8E;
+        }
+    }
+}

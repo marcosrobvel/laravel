@@ -1,0 +1,57 @@
+.about-us-home {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color: #F9F9F9;
+    padding-bottom: 200px;
+
+    &__title {
+        padding-top: 40px;
+        font-family: 'Archivo';
+        letter-spacing: 2.8px;
+        color: #777777;
+
+        h5 {
+            margin: 0;
+        }
+    }
+
+    .big-title__discover-our-underground {
+        h1 {
+            font-family: 'Old Standard TT';
+            font-size: 60px;
+            font-weight: 10;
+            margin-top: 30px;
+            line-height: 110%;
+        }
+    }
+
+    .information-text__btn-book-now {
+        margin-top: 15px;
+        padding-right: 20px;
+
+        p {
+            font-family: 'Archivo';
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .btn {
+            color: white;
+            border-color: #ffffff;
+            background-color: #BEAD8E;
+            font-family: 'Archivo';
+            letter-spacing: 3px;
+            font-weight: 500;
+            height: auto;
+            padding: 20px;
+            width: 216px;
+            margin-top: 30px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #9f9f9f;
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.exampleRoom{
+    height: auto;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.duplexRoom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.title_text_priceNight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.duplexRoom .divIconsRoom{
+    position: relative;
+    top: -20px;
+    z-index: 111;
+}
+
+.divPrice_and_Link .paraphsPriceNight .p1{
+    font-size: 16px;
+}
+
+.title_text_priceNight h1{
+    font-family: 'Old Standard TT';
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.title_text_priceNight .paraphExampleRoom{
+    width: 300px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.paraphsPriceNight a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: #BDBDBD;
+    font-family: 'Archivo';
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.divPaginationExampleRooms{
+    display: flex;
+    justify-content: center;
+}
+
+.divPaginationExampleRooms a{
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #222222;
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.divPaginationExampleRooms a:hover{
+    background-color: #BEAD8E;
+    color: white;
+}

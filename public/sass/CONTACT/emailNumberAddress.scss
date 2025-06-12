@@ -1,0 +1,79 @@
+.emailNumberAddress{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.divBigTitleNumbers h1{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 100%;
+    color: #F8F8F8;
+    z-index: -111;
+    position: absolute;
+    right: 0;
+    
+}
+
+.textAddressContact h1, .textNumberContact h1, .textEmailContact h1{
+    font-family: 'Old Standard TT';
+    font-weight: 400;
+    font-size: 20px;
+    color: #222222;
+    margin: 0;
+}
+
+.bigTextTitleNumber01{
+    top: 422px;
+    left: 160px;
+ }
+
+.bigTextTitleNumber02{
+   bottom: -170px;
+   left: 130px;
+}
+
+.bigTextTitleNumber03{
+    bottom: -405px;
+    left: 130px;
+ }
+
+.textAddressContact, .textNumberContact, .textEmailContact {
+    position: relative;
+    z-index: 111;
+    margin-bottom: 150px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.sectionAddress, .sectionNumber, .sectionEmail{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.textAddressContact p, .textNumberContact p, .textEmailContact p{
+    width: 70%;
+    margin-top: 15px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+}
+
+.textNumberContact p{
+    width: 50%;
+}
+
+.imgContact{
+    display: flex;
+    justify-self: center;
+    height: 80%;
+    margin-bottom: 50px;
+}

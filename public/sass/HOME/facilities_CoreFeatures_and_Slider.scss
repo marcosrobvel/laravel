@@ -1,0 +1,59 @@
+.facilities__core-features-and-slider {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h5 {
+        font-family: 'Archivo';
+        letter-spacing: 2.8px;
+        font-weight: 700;
+        color: #777777;
+        margin-bottom: 15px;
+    }
+
+    & h1 {
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 56px;
+        margin-bottom: 10px;
+    }
+
+    & .facilities__icon-stars-hand {
+        position: relative;
+        right: -100px;
+        top: 30px;
+    }
+
+    & .facilities__icon-numbers-difused {
+        position: relative;
+        left: -110px;
+    }
+
+    & .facilities__div-big-title-paraph {
+        width: 300px;
+        display: flex;
+        justify-self: left;
+        flex-direction: column;
+        margin-top: 35px;
+
+        & h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        & p {
+            font-family: 'Archivo';
+            font-weight: 400;
+            line-height: 24px;
+            font-size: 14px;
+        }
+    }
+
+    & .facilities__icon-slider {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,1893 @@
+@charset "UTF-8";
+.header__container2 {
+  display: none;
+}
+.header__container {
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+.header__menu-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header__menu-toggle {
+  display: none;
+}
+.header__menu-hamburger {
+  cursor: pointer;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 25px;
+}
+.header__menu-hamburger .header__line {
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+.header__menu-toggle:checked + .header__menu-hamburger .header__line--1 {
+  transform: rotate(45deg);
+  position: relative;
+  top: 7px;
+}
+.header__menu-toggle:checked + .header__menu-hamburger .header__line--2 {
+  opacity: 0;
+}
+.header__menu-toggle:checked + .header__menu-hamburger .header__line--3 {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -7px;
+}
+.header__menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  z-index: 1000;
+}
+.header__menu-toggle:checked + .header__menu-hamburger + .header__menu {
+  display: flex;
+}
+.header__menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.header__menu-item {
+  width: 100%;
+  text-align: left;
+  margin-left: 20px;
+  font-family: "Archivo";
+}
+.header__menu-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.header__menu-link:hover {
+  background-color: #f0f0f0;
+}
+.header__letter-h {
+  padding: 10px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1), -1px 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  width: 35px;
+}
+.header__title {
+  margin-right: 140px;
+}
+.header__title-h5 {
+  font-family: "Archivo";
+}
+.header__title-h5--hotel {
+  font-weight: 800;
+}
+.header__title-h5--miranda {
+  font-weight: 500;
+}
+.header__icon {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header__container {
+    display: none;
+  }
+  .header__container2 {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__menu-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header__letter-h {
+    margin-left: 20px;
+  }
+  .header__title {
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+  .header__title-h5 {
+    font-size: 20px;
+  }
+  .header__letter-h {
+    height: 50px;
+    width: 50px;
+  }
+  .header__menu-list {
+    display: flex;
+    margin-left: 0;
+  }
+  .header__menu-list > li {
+    width: 100px;
+  }
+  .header__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+}
+.black-background__perfect-base-for-you {
+  height: auto;
+  background-color: #333333;
+  width: 100%;
+  color: white;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-bottom: 80px;
+}
+.black-background__perfect-base-for-you .h5-title h5 {
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  width: 70%;
+}
+.black-background__perfect-base-for-you .big-title__perfect-base-for-you {
+  margin-top: 30px;
+}
+.black-background__perfect-base-for-you .big-title__perfect-base-for-you h1 {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 110%;
+}
+.black-background__perfect-base-for-you .btns__take-tour-learn-more {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 30px;
+}
+.black-background__perfect-base-for-you .btns__take-tour-learn-more .btn__take-a-tour {
+  background-color: #BEAD8E;
+  color: white;
+  border-color: #ffffff;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.black-background__perfect-base-for-you .btns__take-tour-learn-more .btn {
+  color: white;
+  border-color: #ffffff;
+  background-color: #333333;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.black-background__perfect-base-for-you .btns__take-tour-learn-more .btn:last-child {
+  margin-bottom: 0;
+}
+.black-background__perfect-base-for-you .btns__take-tour-learn-more .btn:hover {
+  cursor: pointer;
+}
+
+.select-dates {
+  width: auto;
+  background-color: #222222;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+.select-dates .select__arrival-date,
+.select-dates .select__departure-date {
+  margin-bottom: 20px;
+}
+.select-dates .select__arrival-date .select__label,
+.select-dates .select__departure-date .select__label {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: white;
+  margin-bottom: 10px;
+}
+.select-dates .select__arrival-date .select__input-wrapper,
+.select-dates .select__departure-date .select__input-wrapper {
+  display: flex;
+}
+.select-dates .select__arrival-date .select__input-wrapper .select__input,
+.select-dates .select__departure-date .select__input-wrapper .select__input {
+  display: flex;
+  background-color: #222222;
+  height: 40px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #BEAD8E;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #686868;
+}
+.select-dates .select__arrival-date .select__input-wrapper .select__input:focus,
+.select-dates .select__departure-date .select__input-wrapper .select__input:focus {
+  border-color: #BEAD8E;
+}
+.select-dates .btn-check-availability .btn {
+  color: white;
+  border-color: #ffffff;
+  background-color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  padding: 20px;
+}
+.select-dates .btn-check-availability .btn:hover {
+  background-color: #9f9f9f;
+}
+
+.about-us-home {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  background-color: #F9F9F9;
+  padding-bottom: 200px;
+}
+.about-us-home__title {
+  padding-top: 40px;
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  color: #777777;
+}
+.about-us-home__title h5 {
+  margin: 0;
+}
+.about-us-home .big-title__discover-our-underground h1 {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  font-weight: 10;
+  margin-top: 30px;
+  line-height: 110%;
+}
+.about-us-home .information-text__btn-book-now {
+  margin-top: 15px;
+  padding-right: 20px;
+}
+.about-us-home .information-text__btn-book-now p {
+  font-family: "Archivo";
+  line-height: 25px;
+  font-size: 14px;
+}
+.about-us-home .information-text__btn-book-now .btn {
+  color: white;
+  border-color: #ffffff;
+  background-color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: auto;
+  padding: 20px;
+  width: 216px;
+  margin-top: 30px;
+}
+.about-us-home .information-text__btn-book-now .btn:hover {
+  cursor: pointer;
+  background-color: #9f9f9f;
+}
+
+.strong-team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.strong-team__image {
+  height: 300px;
+  width: 270px;
+  background-color: #E4E4E4;
+}
+.strong-team__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.strong-team__content .strong-team__icon {
+  margin-bottom: 25px;
+  z-index: 1;
+}
+.strong-team__content .strong-team__title {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.strong-team__content .strong-team__text {
+  text-align: center;
+  width: 200px;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 22px;
+}
+.strong-team__content .strong-team__icon--difused {
+  position: absolute;
+  top: 294%;
+  left: 48%;
+}
+
+.luxury-room__hand-picked-rooms {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  width: 270px;
+}
+.luxury-room__hand-picked-rooms .luxury-room__image-gray {
+  height: 300px;
+  width: 100%;
+  background-color: #E4E4E4;
+}
+.luxury-room__hand-picked-rooms .luxury-room__black-background {
+  background-color: #222222;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.luxury-room__hand-picked-rooms .luxury-room__black-background .luxury-room__title {
+  margin-top: 25px;
+  font-family: "Old Standard TT";
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.luxury-room__hand-picked-rooms .luxury-room__black-background .luxury-room__description {
+  font-family: "Roboto";
+  text-align: center;
+  font-size: small;
+  width: 190px;
+  font-weight: 200;
+  line-height: 22px;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: #BEAD8E;
+  color: white;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input#slide1:checked ~ .slider-wrapper {
+  transform: translateX(0%);
+}
+
+input#slide2:checked ~ .slider-wrapper {
+  transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slider-wrapper {
+  transform: translateX(-200%);
+}
+
+.prev, .next {
+  visibility: visible;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.title-rooms__title-hand-picked-rooms-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.title-rooms__title-hand-picked-rooms-slider h5 {
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  color: #777777;
+}
+.title-rooms__title-hand-picked-rooms-slider h1 {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__icons-room {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 111;
+  position: relative;
+  top: 20px;
+  background-color: white;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__icons-room img {
+  width: auto;
+  height: 18px;
+  margin: 0 10px;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__slider-container {
+  position: relative;
+  width: 100%;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__slider-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__slide img {
+  width: 100%;
+  height: auto;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__prev, .title-rooms__title-hand-picked-rooms-slider .title-rooms__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__prev {
+  left: 10px;
+}
+.title-rooms__title-hand-picked-rooms-slider .title-rooms__next {
+  right: 10px;
+}
+
+.minimal-duplex-room__price-night {
+  position: relative;
+  bottom: 20px;
+  z-index: 111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  background-color: white;
+  width: 370px;
+  justify-self: center;
+}
+.minimal-duplex-room__price-night h1 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.minimal-duplex-room__price-night h5 {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.minimal-duplex-room__price-night .minimal-duplex-room__text {
+  width: 60%;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+.minimal-duplex-room__price-night .minimal-duplex-room__paraphs-price-night {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.minimal-duplex-room__price-night .minimal-duplex-room__paraphs-price-night .minimal-duplex-room__price, .minimal-duplex-room__price-night .minimal-duplex-room__paraphs-price-night .minimal-duplex-room__night {
+  font-family: "Archivo";
+  color: #BEAD8E;
+  font-weight: 700;
+}
+.minimal-duplex-room__price-night .minimal-duplex-room__paraphs-price-night .minimal-duplex-room__price {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.di-titles__video-and-button {
+  background-color: #222222;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin-top: 30px;
+}
+.di-titles__video-and-button h5 {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.di-titles__video-and-button h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 60px;
+  font-family: "Old Standard TT";
+}
+.di-titles__video-and-button .di-titles__big-title-video-button {
+  width: 350px;
+  margin-bottom: 20px;
+}
+.di-titles__video-and-button p {
+  font-family: "Archivo";
+  color: white;
+  font-weight: 100;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.di-titles__video-and-button video {
+  margin-bottom: 20px;
+}
+.di-titles__video-and-button button {
+  color: white;
+  border-color: #ffffff;
+  background-color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  padding: 20px;
+  width: 200px;
+}
+
+.facilities__core-features-and-slider {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.facilities__core-features-and-slider h5 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-weight: 700;
+  color: #777777;
+  margin-bottom: 15px;
+}
+.facilities__core-features-and-slider h1 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+.facilities__core-features-and-slider .facilities__icon-stars-hand {
+  position: relative;
+  right: -100px;
+  top: 30px;
+}
+.facilities__core-features-and-slider .facilities__icon-numbers-difused {
+  position: relative;
+  left: -110px;
+}
+.facilities__core-features-and-slider .facilities__div-big-title-paraph {
+  width: 300px;
+  display: flex;
+  justify-self: left;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.facilities__core-features-and-slider .facilities__div-big-title-paraph h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.facilities__core-features-and-slider .facilities__div-big-title-paraph p {
+  font-family: "Archivo";
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
+}
+.facilities__core-features-and-slider .facilities__icon-slider {
+  margin-top: 40px;
+}
+
+.food-menu {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+}
+.food-menu__big-title {
+  margin-bottom: 30px;
+}
+.food-menu__slider-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+.food-menu__slider-options h1 {
+  font-size: 24px;
+}
+.food-menu__slider-options h5 {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.food-menu__slider-options .food-menu__option1, .food-menu__slider-options .food-menu__option2, .food-menu__slider-options .food-menu__option3 {
+  display: flex;
+}
+.food-menu__slider-options .food-menu__option1 h1, .food-menu__slider-options .food-menu__option2 h1, .food-menu__slider-options .food-menu__option3 h1 {
+  font-size: 24px;
+}
+.food-menu__slider-options .food-menu__option-image {
+  height: 100px;
+  width: 100px;
+  background-color: #dbdbdb;
+}
+.food-menu__slider-options .food-menu__title-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 200px;
+}
+.food-menu__slider-options .food-menu__title-text h1, .food-menu__slider-options .food-menu__title-text p {
+  position: relative;
+  bottom: 15px;
+}
+.food-menu__btns-slider {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+  font-size: 12px;
+}
+.food-menu__btns-slider .food-menu__prev-slider, .food-menu__btns-slider .food-menu__next-slider {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #f8f8f8;
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+.food-menu__btns-slider .food-menu__prev-slider:hover, .food-menu__btns-slider .food-menu__next-slider:hover {
+  background-color: #bead8e;
+  color: white;
+}
+.food-menu .food-menu__prev-slider {
+  margin-right: 5px;
+}
+.food-menu .food-menu__next-slider {
+  margin-left: 5px;
+}
+
+.icon-donut {
+  position: absolute;
+  right: 0;
+}
+
+.food-menu h5 {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-size: 14px;
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+.food-menu h1 {
+  font-family: "Old Standard TT";
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.slider-home-3-images {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.slider-home-3-images input[type=radio] {
+  display: none;
+}
+.slider-home-3-images__slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slider-home-3-images__slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-home-3-images__slide img {
+  width: 90%;
+  display: block;
+}
+.slider-home-3-images__nav-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.slider-home-3-images__nav-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #EDEDED;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.slider-home-3-images__nav-dot:hover {
+  background-color: #BEAD8E;
+}
+.slider-home-3-images__nav-dot.slider-home-3-images__dot-1 {
+  background-color: #EDEDED;
+}
+.slider-home-3-images__nav-dot.slider-home-3-images__dot-2 {
+  background-color: #EDEDED;
+}
+.slider-home-3-images__nav-dot.slider-home-3-images__dot-3 {
+  background-color: #EDEDED;
+}
+.slider-home-3-images input#slide-1:checked ~ .slider-home-3-images__slides {
+  transform: translateX(0%);
+}
+.slider-home-3-images input#slide-2:checked ~ .slider-home-3-images__slides {
+  transform: translateX(-100%);
+}
+.slider-home-3-images input#slide-3:checked ~ .slider-home-3-images__slides {
+  transform: translateX(-200%);
+}
+.slider-home-3-images input#slide-1:checked ~ .slider-home-3-images__nav-dots .slider-home-3-images__dot-1, .slider-home-3-images input#slide-2:checked ~ .slider-home-3-images__nav-dots .slider-home-3-images__dot-2, .slider-home-3-images input#slide-3:checked ~ .slider-home-3-images__nav-dots .slider-home-3-images__dot-3 {
+  background-color: #BEAD8E;
+}
+
+.black-background-final-home {
+  display: flex;
+  padding-top: 50px;
+  background-color: #222222;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+.black-background-final-home__icon-number-text-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.black-background-final-home__icon-number-text-component img {
+  margin-bottom: 20px;
+}
+.black-background-final-home__icon-number-text-component h1 {
+  font-family: "Roboto";
+  font-size: 60px;
+  line-height: 136%;
+  color: white;
+  margin: 0;
+  height: 70px;
+}
+.black-background-final-home__icon-number-text-component h1 span {
+  font-size: 16px;
+}
+.black-background-final-home__icon-number-text-component p {
+  color: #999999;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+.footer-container {
+  background-image: url(../img/footerBackground.png); /* Aquí restauramos el fondo de imagen */
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer-container .footer-title {
+  display: flex;
+}
+.footer-container .footer-title .img-h-title {
+  font-family: "Archivo", sans-serif;
+  color: white;
+  background-color: #BEAD8E;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .footer-title .title-hotel-miranda {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.footer-container .footer-title .title-hotel-miranda .h2-hotel {
+  font-weight: 700;
+}
+.footer-container .footer-title .title-hotel-miranda .h2-miranda {
+  font-weight: 400;
+}
+.footer-container .text-and-icons-footer p {
+  margin-top: 50px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  line-height: 26px;
+}
+.footer-container .text-and-icons-footer .icons-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  gap: 15px;
+}
+.footer-container .text-and-icons-footer .icons-footer .icon-footer-component .icon-around {
+  background-color: #F8F8F8;
+  display: inline-block;
+  padding: 5px;
+}
+.footer-container .text-and-icons-footer .footer-services {
+  margin-top: 30px;
+}
+.footer-container .text-and-icons-footer .footer-services h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.footer-container .text-and-icons-footer .footer-services .services-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 320px;
+}
+.footer-container .text-and-icons-footer .footer-services .services-list p {
+  margin-top: 25px;
+  font-size: 16px;
+}
+.footer-container .contact-footer {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-container .contact-footer h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.footer-container .contact-footer .contact-types {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 35px;
+}
+.footer-container .contact-footer .contact-types .contact-component {
+  display: flex;
+  gap: 20px;
+}
+.footer-container .contact-footer .contact-types .contact-component h1 {
+  font-size: 20px;
+}
+.footer-container .contact-footer .contact-types .contact-component p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.copyright-section-terms-of-use {
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.copyright-section-terms-of-use .paraph-copyright {
+  margin-bottom: 20px;
+}
+.copyright-section-terms-of-use .paraph-termsofuse {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.menu ul {
+  list-style: none;
+  display: none;
+  left: 0;
+  background-color: white;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.menu li {
+  margin-bottom: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Archivo";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menuHamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+}
+
+.menuHamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu ul {
+  list-style: none;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu-toggle:checked ~ .menu ul {
+  display: block;
+}
+
+#menu-toggle:checked ~ .menuHamburger .lineMenu1 {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+#menu-toggle:checked ~ .menuHamburger .lineMenu2 {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menuHamburger .lineMenu3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Esto es el archivo styles.css generado con Sass */
+.about-us {
+  padding: 20px;
+  background-color: #333333;
+  color: white;
+  width: 100%;
+}
+.about-us__subtitle {
+  font-family: "Archivo";
+  letter-spacing: 2.8px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: white;
+}
+.about-us__main-title {
+  margin-top: 30px;
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 110%;
+}
+.about-us__links {
+  margin-top: 20px;
+  background-color: white;
+  display: inline-block;
+  padding: 20px 30px;
+  position: relative;
+  top: 30px;
+  left: 190px;
+  color: #222222;
+}
+.about-us__link {
+  text-decoration: none;
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #222222;
+}
+.about-us__link:hover {
+  color: #BEAD8E;
+}
+.about-us__link--home {
+  margin-right: 10px;
+}
+.about-us__link--about {
+  margin-left: 10px;
+  color: #BEAD8E;
+}
+
+.about-us__video-and-title {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.about-us__video {
+  height: 220px;
+}
+.about-us__title {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #222222;
+  letter-spacing: -1.16px;
+}
+
+.about-us__icons-services {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+.about-us__icons-services__services {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+}
+.about-us__icons-services__services--coffee-plane {
+  gap: 5rem;
+}
+.about-us__icons-services__services--cityguide-luxury-room {
+  gap: 6rem;
+  margin-top: 60px;
+}
+.about-us__icons-services__service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us__icons-services__service--coffee, .about-us__icons-services__service--plane, .about-us__icons-services__service--cityguide, .about-us__icons-services__service--luxury-room {
+  margin-top: 10px;
+}
+.about-us__icons-services__service--luxury-room {
+  margin-right: 20px;
+}
+.about-us h5 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: #222222;
+  margin-top: 8px;
+  letter-spacing: 2.4px;
+}
+
+.restaurant-about-us {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 80px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-about-us__title {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 14px;
+  color: #777777;
+  margin-top: 30px;
+  letter-spacing: 2.8px;
+}
+.restaurant-about-us__heading {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: -1.05;
+  color: #222222;
+  margin-top: 20px;
+}
+.restaurant-about-us__description {
+  margin-top: 20px;
+  font-family: "Archivo";
+  font-weight: 400;
+  font-size: 14px;
+  color: #777777;
+  line-height: 24px;
+  width: 90%;
+}
+.restaurant-about-us__button {
+  margin-top: 20px;
+  width: 60%;
+  color: white;
+  border-color: #ffffff;
+  background-color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  padding: 20px;
+}
+
+.facilities-core-features {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+}
+.facilities-core-features__title {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  color: #FFFFFF;
+}
+.facilities-core-features__heading {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 56px;
+  color: #FFFFFF;
+}
+.facilities-core-features__slider {
+  background-color: #292929;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.facilities-core-features__slider__icon {
+  margin-right: 15px;
+  width: 30px;
+  height: auto;
+}
+.facilities-core-features__slider__slider-number {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 40px;
+  color: #222222;
+  margin-right: 20px;
+}
+.facilities-core-features__slider__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.facilities-core-features__slider__feature-heading {
+  font-family: "Old Standard TT";
+  font-weight: 700;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+.facilities-core-features__slider__feature-description {
+  font-family: "Archivo";
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 24px;
+  width: 80%;
+  margin-top: 20px;
+}
+.facilities-core-features__slider__h1Big01 {
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 130px;
+  color: #222222;
+  position: absolute;
+  bottom: -96rem;
+  right: 0;
+  margin-right: 30px;
+}
+.facilities-core-features__slider__image {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+.facilities-core-features__dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.facilities-core-features__dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 1.5px;
+  background-color: #333333;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.facilities-core-features__dot:hover {
+  background-color: #BEAD8E;
+}
+
+.counter-fun-facts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+}
+.counter-fun-facts__title {
+  color: #777777;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2.8px;
+  text-align: left;
+}
+.counter-fun-facts__heading {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 56px;
+  color: #222222;
+  margin-top: 15px;
+  text-align: left;
+}
+.counter-fun-facts__item {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+.counter-fun-facts__item__icon {
+  margin-right: 15px;
+}
+.counter-fun-facts__item__text {
+  display: flex;
+  flex-direction: column;
+}
+.counter-fun-facts__item__number {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 50px;
+  color: #222222;
+}
+.counter-fun-facts__item__description {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  color: #777777;
+}
+.counter-fun-facts__item__arrow {
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+}
+.counter-fun-facts__default-slider-image {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  align-self: center;
+}
+.counter-fun-facts__dots-slider-image {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  align-self: center;
+}
+.counter-fun-facts__dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.counter-fun-facts__dots-container__dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 1.5px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.counter-fun-facts__dots-container__dot--active {
+  background-color: #BEAD8E;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+.footer-container {
+  background-image: url(../img/footerBackground.png); /* Aquí restauramos el fondo de imagen */
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer-container .footer-title {
+  display: flex;
+}
+.footer-container .footer-title .img-h-title {
+  font-family: "Archivo", sans-serif;
+  color: white;
+  background-color: #BEAD8E;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .footer-title .title-hotel-miranda {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.footer-container .footer-title .title-hotel-miranda .h2-hotel {
+  font-weight: 700;
+}
+.footer-container .footer-title .title-hotel-miranda .h2-miranda {
+  font-weight: 400;
+}
+.footer-container .text-and-icons-footer p {
+  margin-top: 50px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  line-height: 26px;
+}
+.footer-container .text-and-icons-footer .icons-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  gap: 15px;
+}
+.footer-container .text-and-icons-footer .icons-footer .icon-footer-component .icon-around {
+  background-color: #F8F8F8;
+  display: inline-block;
+  padding: 5px;
+}
+.footer-container .text-and-icons-footer .footer-services {
+  margin-top: 30px;
+}
+.footer-container .text-and-icons-footer .footer-services h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.footer-container .text-and-icons-footer .footer-services .services-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 320px;
+}
+.footer-container .text-and-icons-footer .footer-services .services-list p {
+  margin-top: 25px;
+  font-size: 16px;
+}
+.footer-container .contact-footer {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-container .contact-footer h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.footer-container .contact-footer .contact-types {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 35px;
+}
+.footer-container .contact-footer .contact-types .contact-component {
+  display: flex;
+  gap: 20px;
+}
+.footer-container .contact-footer .contact-types .contact-component h1 {
+  font-size: 20px;
+}
+.footer-container .contact-footer .contact-types .contact-component p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.copyright-section-terms-of-use {
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.copyright-section-terms-of-use .paraph-copyright {
+  margin-bottom: 20px;
+}
+.copyright-section-terms-of-use .paraph-termsofuse {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.blackBackground_UltimateRoom {
+  height: auto;
+  background-color: #333333;
+  width: 100%;
+  color: white;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+}
+
+.blackBackground_UltimateRoom h5 {
+  font-family: "Archivo";
+  letter-spacing: 3px;
+}
+
+.h5Title {
+  width: 70%;
+}
+
+.bigTitle_UltimateRoom {
+  margin-top: 30px;
+  width: 100px;
+}
+
+.bigTitle_UltimateRoom h1 {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  font-weight: 10;
+  line-height: 110%;
+}
+
+.divLinks_Home_Rooms {
+  background-color: white;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 60px;
+  right: -215px;
+}
+
+.divLinks_Home_Rooms p {
+  color: #222222;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.divLinks_Home_Rooms a {
+  text-decoration: none;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.linkHome {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.linkRooms {
+  margin-left: 10px;
+  color: #BEAD8E;
+}
+
+.exampleRoom {
+  height: auto;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.duplexRoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.title_text_priceNight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.duplexRoom .divIconsRoom {
+  position: relative;
+  top: -20px;
+  z-index: 111;
+}
+
+.divPrice_and_Link .paraphsPriceNight .p1 {
+  font-size: 16px;
+}
+
+.title_text_priceNight h1 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.title_text_priceNight .paraphExampleRoom {
+  width: 300px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #777777;
+  margin-bottom: 15px;
+}
+
+.paraphsPriceNight a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #BDBDBD;
+  font-family: "Archivo";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.divPaginationExampleRooms {
+  display: flex;
+  justify-content: center;
+}
+
+.divPaginationExampleRooms a {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #222222;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.divPaginationExampleRooms a:hover {
+  background-color: #BEAD8E;
+  color: white;
+}
+
+.blackBackground_NewDetailsContact {
+  height: auto;
+  background-color: #333333;
+  width: 100%;
+  color: white;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-bottom: 60px;
+}
+
+.blackBackground_NewDetailsContact h5 {
+  font-family: "Archivo";
+  letter-spacing: 3px;
+}
+
+.h5Title {
+  width: 70%;
+}
+
+.bigTitle_NewDetailsContact {
+  margin-top: 30px;
+}
+
+.bigTitle_NewDetailsContact h1 {
+  font-family: "Old Standard TT";
+  font-size: 60px;
+  font-weight: 10;
+  line-height: 110%;
+}
+
+.divLinks_Home_Rooms {
+  background-color: white;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 60px;
+  right: -215px;
+}
+
+.divLinks_Home_Contact p {
+  color: #222222;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.divLinks_Home_Contact a {
+  text-decoration: none;
+  font-family: "Archivo";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.linkHome {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.linkContact {
+  margin-left: 10px;
+  color: #BEAD8E;
+}
+
+.emailNumberAddress {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.divBigTitleNumbers h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 100%;
+  color: #F8F8F8;
+  z-index: -111;
+  position: absolute;
+  right: 0;
+}
+
+.textAddressContact h1, .textNumberContact h1, .textEmailContact h1 {
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 20px;
+  color: #222222;
+  margin: 0;
+}
+
+.bigTextTitleNumber01 {
+  top: 422px;
+  left: 160px;
+}
+
+.bigTextTitleNumber02 {
+  bottom: -170px;
+  left: 130px;
+}
+
+.bigTextTitleNumber03 {
+  bottom: -405px;
+  left: 130px;
+}
+
+.textAddressContact, .textNumberContact, .textEmailContact {
+  position: relative;
+  z-index: 111;
+  margin-bottom: 150px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.sectionAddress, .sectionNumber, .sectionEmail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.textAddressContact p, .textNumberContact p, .textEmailContact p {
+  width: 70%;
+  margin-top: 15px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #777777;
+}
+
+.textNumberContact p {
+  width: 50%;
+}
+
+.imgContact {
+  display: flex;
+  justify-self: center;
+  height: 80%;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  border: none;
+  background-color: #F8F8F8;
+  background: none;
+  margin-left: 15px;
+}
+
+input {
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+}
+
+.inputContactName, .inputContactNumber, .inputContactAddress, .inputContactSubject, .inputContactMessage {
+  width: 100%;
+  background-color: #F8F8F8;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.inputContactMessage img {
+  height: 20px;
+}
+
+form button {
+  color: white;
+  border-color: #ffffff;
+  background-color: #BEAD8E;
+  font-family: "Archivo";
+  letter-spacing: 3px;
+  font-weight: 500;
+  height: 60px;
+  padding: 20px;
+  width: 70%;
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+/*# sourceMappingURL=styles.css.map */

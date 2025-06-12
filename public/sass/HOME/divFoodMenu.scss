@@ -1,0 +1,112 @@
+.food-menu {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+
+    &__big-title {
+        margin-bottom: 30px;
+    }
+
+    &__slider-options {
+        display: flex;
+        flex-wrap: wrap;
+
+        & h1 {
+            font-size: 24px;
+        }
+
+        & h5 {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        & .food-menu__option1,
+        & .food-menu__option2,
+        & .food-menu__option3 {
+            display: flex;
+
+            & h1{
+                font-size: 24px;
+            }
+        }
+
+        & .food-menu__option-image {
+            height: 100px;
+            width: 100px;
+            background-color: #dbdbdb;
+        }
+
+        & .food-menu__title-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            width: 200px;
+
+            & h1, & p {
+                position: relative;
+                bottom: 15px;
+            }
+        }
+    }
+
+    &__btns-slider {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        font-weight: 200;
+        font-size: 12px;
+
+        & .food-menu__prev-slider,
+        & .food-menu__next-slider {
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: #f8f8f8;
+            color: black;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 200;
+
+            &:hover {
+                background-color: #bead8e;
+                color: white;
+            }
+        }
+    }
+
+    & .food-menu__prev-slider {
+        margin-right: 5px;
+    }
+
+    & .food-menu__next-slider {
+        margin-left: 5px;
+    }
+}
+
+.icon-donut {
+    position: absolute;
+    right: 0;
+}
+
+.food-menu h5 {
+    font-family: 'Archivo';
+    letter-spacing: 2.8px;
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.food-menu h1 {
+    font-family: 'Old Standard TT';
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 60px;
+}

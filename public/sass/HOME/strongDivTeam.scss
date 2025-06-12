@@ -1,0 +1,50 @@
+.strong-team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    &__image {
+        height: 300px;
+        width: 270px;
+        background-color: #E4E4E4;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+        padding-bottom: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+        .strong-team__icon {
+            margin-bottom: 25px;
+            z-index: 1;
+        }
+
+        .strong-team__title {
+            font-family: 'Old Standard TT';
+            font-weight: 400;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .strong-team__text {
+            text-align: center;
+            width: 200px;
+            font-family: 'Roboto';
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .strong-team__icon--difused {
+            position: absolute;
+            top: 294%;
+            left: 48%;
+        }
+    }
+}

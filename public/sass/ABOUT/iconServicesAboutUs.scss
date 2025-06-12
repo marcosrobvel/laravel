@@ -1,0 +1,53 @@
+.about-us {
+    &__icons-services {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 90px;
+  
+      &__services {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+  
+        &--coffee-plane {
+          gap: 5rem;
+        }
+  
+        &--cityguide-luxury-room {
+          gap: 6rem;
+          margin-top: 60px;
+        }
+      }
+  
+      &__service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        &--coffee,
+        &--plane,
+        &--cityguide,
+        &--luxury-room {
+          margin-top: 10px;
+        }
+  
+        &--luxury-room {
+          margin-right: 20px;
+        }
+      }
+    }
+  
+    h5 {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: #222222;
+      margin-top: 8px;
+      letter-spacing: 2.4px;
+    }
+  }
+  

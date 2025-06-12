@@ -1,0 +1,42 @@
+.luxury-room__hand-picked-rooms {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    width: 270px;
+
+    .luxury-room__image-gray {
+        height: 300px;
+        width: 100%;
+        background-color: #E4E4E4;
+    }
+
+    .luxury-room__black-background {
+        background-color: #222222;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: white;
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        & .luxury-room__title {
+            margin-top: 25px;
+            font-family: 'Old Standard TT';
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        & .luxury-room__description {
+            font-family: 'Roboto';
+            text-align: center;
+            font-size: small;
+            width: 190px;
+            font-weight: 200;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.di-titles__video-and-button {
+    background-color: #222222;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+
+    & h5 {
+        color: #BEAD8E;
+        font-family: 'Archivo';
+        letter-spacing: 2.8px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    & h1 {
+        color: white;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 60px;
+        font-family: 'Old Standard TT';
+    }
+
+    & .di-titles__big-title-video-button {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        font-family: 'Archivo';
+        color: white;
+        font-weight: 100;
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    & video {
+        margin-bottom: 20px;
+    }
+
+    & button {
+        color: white;
+        border-color: #ffffff;
+        background-color: #BEAD8E;
+        font-family: 'Archivo';
+        letter-spacing: 3px;
+        font-weight: 500;
+        height: 60px;
+        padding: 20px;
+        width: 200px;
+    }
+}

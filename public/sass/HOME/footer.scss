@@ -1,0 +1,146 @@
+footer {
+    margin-top: 40px;
+}
+
+.footer-container {
+    background-image: url(../img/footerBackground.png); /* Aquí restauramos el fondo de imagen */
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .footer-title {
+        display: flex;
+
+        .img-h-title {
+            font-family: 'Archivo', sans-serif;
+            color: white;
+            background-color: #BEAD8E;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: 700;
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-hotel-miranda {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            margin-left: 20px;
+            margin-top: 10px;
+
+            .h2-hotel {
+                font-weight: 700;
+            }
+
+            .h2-miranda {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .text-and-icons-footer {
+        p {
+            margin-top: 50px;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #777777;
+            line-height: 26px;
+        }
+
+        .icons-footer {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 30px;
+            gap: 15px;
+
+            .icon-footer-component {
+                .icon-around {
+                    background-color: #F8F8F8;
+                    display: inline-block;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .footer-services {
+            margin-top: 30px;
+
+            h1 {
+                font-family: 'Old Standard TT', serif;
+                font-weight: 400;
+                font-size: 24px;
+            }
+
+            .services-list {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 320px;
+
+                p {
+                    margin-top: 25px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .contact-footer {
+        margin-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-family: 'Old Standard TT', serif;
+            font-weight: 400;
+            font-size: 24px;
+        }
+
+        .contact-types {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 35px;
+
+            .contact-component {
+                display: flex;
+                gap: 20px;
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #777777;
+                }
+            }
+        }
+    }
+}
+
+.copyright-section-terms-of-use {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+
+    .paraph-copyright {
+        margin-bottom: 20px;
+    }
+
+    .paraph-termsofuse {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}

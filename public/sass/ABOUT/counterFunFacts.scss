@@ -1,0 +1,97 @@
+.counter-fun-facts {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+
+    &__title {
+        color: #777777;
+        font-family: 'Archivo';
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        text-align: left;
+    }
+
+    &__heading {
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 56px;
+        color: #222222;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        position: relative;
+
+        &__icon {
+            margin-right: 15px;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__number {
+            font-family: 'Old Standard TT';
+            font-weight: 400;
+            font-size: 50px;
+            color: #222222;
+        }
+
+        &__description {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 14px;
+            color: #777777;
+        }
+
+        &__arrow {
+            position: absolute;
+            right: 0;
+            margin-right: 25px;
+        }
+    }
+
+    &__default-slider-image {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    &__dots-slider-image {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        align-self: center;
+    }
+
+    &__dots-container {
+        text-align: center;
+        margin-top: 10px;
+
+        &__dot {
+            height: 8px;
+            width: 8px;
+            margin: 0 1.5px;
+            background-color: #333;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &--active {
+                background-color: #BEAD8E;
+            }
+        }
+    }
+}
