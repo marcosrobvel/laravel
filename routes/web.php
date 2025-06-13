@@ -8,7 +8,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
